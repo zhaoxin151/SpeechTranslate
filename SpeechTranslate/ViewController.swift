@@ -2,20 +2,18 @@
 //  ViewController.swift
 //  SpeechTranslate
 //
-//  Created by NATON on 2017/5/31.
+//  Created by NATON on 2017/6/1.
 //  Copyright © 2017年 NATON. All rights reserved.
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let fo = foo()
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

@@ -2,7 +2,7 @@
 //  SpeechTranslateUITests.swift
 //  SpeechTranslateUITests
 //
-//  Created by NATON on 2017/5/31.
+//  Created by NATON on 2017/6/1.
 //  Copyright © 2017年 NATON. All rights reserved.
 //
 
