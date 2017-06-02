@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1966FB51206612DAB63432F9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15AB9538E749F5D696993FDE /* libPods.a */; };
+		965EA6AF1EDFDD4F00156A04 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965EA6AE1EDFDD4F00156A04 /* Language.swift */; };
+		965EA6B11EDFEEA200156A04 /* LanguageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965EA6B01EDFEEA200156A04 /* LanguageListController.swift */; };
+		965EA6B31EDFEF4800156A04 /* SpeechController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965EA6B21EDFEF4800156A04 /* SpeechController.swift */; };
+		965EA6B61EE045E300156A04 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965EA6B51EE045E300156A04 /* AVFoundation.framework */; };
 		96ABF3A21EDFAF1400E8845E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ABF3A11EDFAF1400E8845E /* AppDelegate.swift */; };
-		96ABF3A41EDFAF1400E8845E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ABF3A31EDFAF1400E8845E /* ViewController.swift */; };
 		96ABF3A71EDFAF1400E8845E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96ABF3A51EDFAF1400E8845E /* Main.storyboard */; };
 		96ABF3A91EDFAF1400E8845E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96ABF3A81EDFAF1400E8845E /* Assets.xcassets */; };
 		96ABF3AC1EDFAF1400E8845E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96ABF3AA1EDFAF1400E8845E /* LaunchScreen.storyboard */; };
@@ -73,9 +76,12 @@
 /* Begin PBXFileReference section */
 		15AB9538E749F5D696993FDE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED7AF455C7BC8C77E155236 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		965EA6AE1EDFDD4F00156A04 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		965EA6B01EDFEEA200156A04 /* LanguageListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListController.swift; sourceTree = "<group>"; };
+		965EA6B21EDFEF4800156A04 /* SpeechController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechController.swift; sourceTree = "<group>"; };
+		965EA6B51EE045E300156A04 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		96ABF39E1EDFAF1400E8845E /* SpeechTranslate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechTranslate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96ABF3A11EDFAF1400E8845E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96ABF3A31EDFAF1400E8845E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96ABF3A61EDFAF1400E8845E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96ABF3A81EDFAF1400E8845E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96ABF3AB1EDFAF1400E8845E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965EA6B61EE045E300156A04 /* AVFoundation.framework in Frameworks */,
 				1966FB51206612DAB63432F9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,9 +164,34 @@
 		93B4F630886D591EE764C82E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				965EA6B51EE045E300156A04 /* AVFoundation.framework */,
 				15AB9538E749F5D696993FDE /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		965EA6A91EDFDCF600156A04 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				965EA6B01EDFEEA200156A04 /* LanguageListController.swift */,
+				965EA6B21EDFEF4800156A04 /* SpeechController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		965EA6AA1EDFDCF600156A04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				965EA6AE1EDFDD4F00156A04 /* Language.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		965EA6AB1EDFDCF600156A04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		96ABF3951EDFAF1400E8845E = {
@@ -187,10 +219,13 @@
 		96ABF3A01EDFAF1400E8845E /* SpeechTranslate */ = {
 			isa = PBXGroup;
 			children = (
+				965EA6A91EDFDCF600156A04 /* Controller */,
+				965EA6AA1EDFDCF600156A04 /* Model */,
+				965EA6AB1EDFDCF600156A04 /* View */,
+				96ABF41F1EDFB9E900E8845E /* Tools */,
 				96ABF41C1EDFB24300E8845E /* Common */,
 				96ABF3D01EDFB13400E8845E /* 3dParts */,
 				96ABF3A11EDFAF1400E8845E /* AppDelegate.swift */,
-				96ABF3A31EDFAF1400E8845E /* ViewController.swift */,
 				96ABF3A51EDFAF1400E8845E /* Main.storyboard */,
 				96ABF3CF1EDFB07300E8845E /* Support file */,
 			);
@@ -292,6 +327,13 @@
 				96ABF41D1EDFB26700E8845E /* HttpRequest.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		96ABF41F1EDFB9E900E8845E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		9A7404E30F1F826323D04F6B /* Pods */ = {
@@ -498,6 +540,7 @@
 				96ABF4071EDFB1E300E8845E /* ConstraintMakerFinalizable.swift in Sources */,
 				96ABF3FF1EDFB1E300E8845E /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				96ABF4121EDFB1E300E8845E /* ConstraintViewDSL.swift in Sources */,
+				965EA6AF1EDFDD4F00156A04 /* Language.swift in Sources */,
 				96ABF3F81EDFB1E300E8845E /* ConstraintConfig.swift in Sources */,
 				96ABF3F71EDFB1E300E8845E /* ConstraintAttributes.swift in Sources */,
 				96ABF4091EDFB1E300E8845E /* ConstraintMakerRelatable.swift in Sources */,
@@ -512,14 +555,15 @@
 				96ABF40D1EDFB1E300E8845E /* ConstraintPriorityTarget.swift in Sources */,
 				96ABF4111EDFB1E300E8845E /* ConstraintView.swift in Sources */,
 				96ABF4001EDFB1E300E8845E /* ConstraintLayoutGuide.swift in Sources */,
-				96ABF3A41EDFAF1400E8845E /* ViewController.swift in Sources */,
 				96ABF4051EDFB1E300E8845E /* ConstraintMakerEditable.swift in Sources */,
+				965EA6B11EDFEEA200156A04 /* LanguageListController.swift in Sources */,
 				96ABF4041EDFB1E300E8845E /* ConstraintMaker.swift in Sources */,
 				96ABF3FA1EDFB1E300E8845E /* ConstraintDescription.swift in Sources */,
 				96ABF4131EDFB1E300E8845E /* Debugging.swift in Sources */,
 				96ABF41B1EDFB20D00E8845E /* Foo.m in Sources */,
 				96ABF4151EDFB1E300E8845E /* LayoutConstraint.swift in Sources */,
 				96ABF40C1EDFB1E300E8845E /* ConstraintPriority.swift in Sources */,
+				965EA6B31EDFEF4800156A04 /* SpeechController.swift in Sources */,
 				96ABF4161EDFB1E300E8845E /* LayoutConstraintItem.swift in Sources */,
 				96ABF40A1EDFB1E300E8845E /* ConstraintMultiplierTarget.swift in Sources */,
 				96ABF4081EDFB1E300E8845E /* ConstraintMakerPriortizable.swift in Sources */,
